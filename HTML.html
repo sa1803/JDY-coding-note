@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>정.코 - HTML</title>
+    <link rel="stylesheet" href="style/정코.css"/>
+</head>
+
+<body>
+    <header>
+        <a class="nocolor" href="메인.html">
+            <h1>정동영의 코딩노트</h1>
+        </a>
+    </header>
+    
+    <main>
+        <h2>HTML</h2>
+        
+        <div class="lec_sml_cnt">
+            <a href="HTML.html">
+                <div class="lec_small" id="current">
+                    <div class="lec_content" style="font-size:16px;">
+                        HTML
+                    </div>
+                </div>
+            </a>
+            
+            <a href="HTML_태그.html">
+                <div class="lec_small">
+                    <div class="lec_content" style="font-size:16px;">
+                        HTML<br>태그
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <pre>
+          <ol>
+              <li>!doctype html : 이 문서는 html이다 (태그는 아님)</li>
+
+              <li>html : 시작과 끝에</li>
+
+              <li>head : 웹브라우저에서 위에 띄워지는 부분</li>
+
+              <li>title : head에 나타나는 글자</li>
+
+              <li>meta charset="utf-8" : utf-8로 읽어라</li>
+
+              <li>! : 주석</li>
+
+              <li><div class="impt">특수기호 표현</div></li>
+                  - &amp;nbsp : 빈 문자
+                  - &amp;amp : &
+                  - &amp;lt (less than)
+                  - &gt : &amp;gt (greater than)
+
+              <li><div class="impt">class : 한 태그의 속성으로 class를 주면 '그룹화'하여 CSS를 쓸 수 있음</div></li>
+                  - <div class="code">
+                    &lt;style&gt;<br>
+                    .class {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                    }<br>
+                    style</div>
+
+              <li>id : 한 태그의 속성으로 id를 주면 class보다 우선순위가 높게 컨트롤 가능</li>
+                  - class의 "." 대신에 id는 "#"을 씀
+                  - id는 class와 달리 유일해야 함
+
+              <li>title에 아이콘 넣기</li>
+              - <div class="code">&lt;link href="이미지주소.ico" rel="shortcut icon" type="image/x-con"&gt;</div>
+
+              <li>다른 경로에 있는 image, stylesheet 가져오기</li>
+                  - 하위폴더: "하위폴더/파일"
+                  - 상위폴더: "../상위폴더/파일"
+                    ("../파일")
+
+              <li>/&gt; : 굳이 &lt;div&gt;&lt/div&gt; 이렇게 할 필요 없이 &lt;div/&gt;</li>
+
+              <li>웹폰트 : 사용자가 폰트가 없을 경우 다운받아 쓰도록 하는 방법
+                  - (특히 한글의 경우) 용량이 커서 장단점이 있음
+                  - <a href="https://fonts.google.com" target="_blank">구글이 제공하는 웹폰트 사이트</a>
+                  - 내가 가진 폰트를 웹폰트로 만들 수도 있음 (face font generator)
+                    <a href="https://www.youtube.com/watch?v=Y2NNmhrsoNc&list=PLuHgQVn
+                  ccGMDaVaBmkX0qfB45R_bYrV62&index=19" target="_blank">참고영상 (08:15 ~ 14:20)</a>
+
+              <li>상속 : 어떤 속성은 상속되지 않는 것도 있다</li>
+                  - 어떤 게 되고 어떤 게 안 되는지 표가 있지만 굳이 외울 필요 없을 듯
+
+              <li>bracket 에디터 : atom보다 편리한 점들이 있음</li>
+                  - tab을 눌러서 바로 코드로 만들기 : 좋음! (emmet이라는 확장 프로그램)
+
+              <li>한 줄 주석처리 : ctrl + / (bracket)</li>
+
+              <li>태그 안에는 주석을 넣을 수 없음</li>
+
+            </ol>
+        </pre>
+    </main>
+</body>
+</html>

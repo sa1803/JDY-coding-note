@@ -1,0 +1,121 @@
+header {
+    text-align: center;
+    border-bottom: 2px solid gray;
+    margin: 0;
+    padding: 100px;
+}
+   
+
+body {   
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+h2 {
+    display: inline-block;
+    width: 500px;
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 55px;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.nocolor{
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+}
+
+ol {
+    margin: 0;
+}
+
+li {
+    margin-top: 20px;
+}
+
+pre {
+    margin: 0px;
+    font-family: initial;
+}
+
+.impt {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.code {
+    background-color: #424242;
+    color: white;
+    display:inline-block;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.no_pre{
+    white-space: normal;
+}
+
+.inline{
+    display: inline;
+}
+
+.star {
+    position:relative;
+    right:150px;
+    top:95px;
+}
+
+.lecture{
+    display: inline-table;
+    color: white;
+    background-color: dimgray;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+}
+
+.lec_small{
+    margin: 10px;
+    display: inline-table;
+    vertical-align: middle;
+    color: white;
+    background-color: dimgray;
+    text-align: center;
+    width:70px; 
+    height:70px; 
+    border-radius: 15px;
+}
+
+#current{
+    background-color: red;
+}
+
+.lec_sml_cnt {
+    display: inline-block;
+    position: relative;
+    left: calc(100% - 750px);
+    width: 210px;
+    height: 110px;
+}
+.lec_content{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 35px;
+}

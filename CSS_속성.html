@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>정.코 - CSS 속성</title>
+    <link rel="stylesheet" href="style/정코.css"/>
+</head>
+
+<body>
+    <header>
+        <a class="nocolor" href="메인.html">
+            <h1>정동영의 코딩노트</h1>
+        </a>
+    </header>
+    
+    <main>
+        <h2>CSS - 속성</h2>
+        
+        <div class="lec_sml_cnt">
+            <a href="CSS.html">
+                <div class="lec_small">
+                    <div class="lec_content" style="font-size:16px;">
+                        CSS
+                    </div>
+                </div>
+            </a>
+            
+            <a href="CSS_속성.html">
+                <div class="lec_small" id="current">
+                    <div class="lec_content" style="font-size:16px;">
+                        CSS<br>속성
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <pre>
+            <ol>
+                <li>font-size : 글자 크기 변경</li>
+                    - 단위: px, em, rem
+                    - 특별한 이유가 없다면 rem을 써라!
+                      (사용자가 조정할 수 있음)
+
+                <li>color : 글자 색 변경</li>
+                    - color name : red, green 등
+                    - rgb : rgb(R, G, B) - R, G, B는 0 ~ 255의 숫자
+                    - hex : #000000 이런 형태 (자세히 알 필요 없다!)
+
+                <li>text-align : 글자 정렬</li>
+                    - left, center, right : 왼, 중, 오
+                    - justify : 양쪽 정렬
+
+                <li>vertical align : 수직 정렬</li>
+                    - middle, top, bottom, baseline 등
+                
+                <li>font 관련 여러가지</li>
+                    - font-family : 글꼴
+                    - 글꼴1, 글꼴2, 글꼴3 ... 이런 식으로 씀
+                    - 한 글꼴 이름 안에 띄어쓰기가 있으면 "" 써줘야 함
+                    - 끝에는 serif/sans-serif 중에 하나를 써줌
+                      (고정폭이면 monospace 써줌)
+                    - font-weight : 굵기
+                    - line-height : 줄간격 (기본은 1.2, 픽셀로 할 수도 있음)
+                    - font : 여러 특성을 한번에 쓰는 것 (순서를 맞춰야 함)
+
+                <li>!important : 적용한 속성 뒤에 이걸 붙이면 우선순위가 높아짐</li>
+
+                <li>display : 화면에 보여지는 것</li>
+                    - inline : 줄바꿈 없음
+                    - block : 줄바꿈 있음
+
+                <li>Box model 관련 여러가지</li>
+                    - padding
+                    - margin
+                    - width
+                    - height
+                    - border
+
+                <li>box sizing : 박스의 크기를 다룸</li>
+                    - content-box : width를 조절할 때 border 크기 미포함
+                                    (width:100px, border:10px이면 화면에 120px로 나타남)
+                    - border-box : width를 조절할 때 border 크기 포함
+                                   (width:100px, border:10px이면 화면에 100px로 나타남)
+
+                <img src="images/별표.png" class="star">
+                <li><div class="impt">position : box의 위치를 조정함</div></li>
+                    - static : 기본값. 위치 정보를 설정하지 않은 상태. 원래 있어야 하는 자리에서 움직이지 않음.
+
+                    - relative
+                         - left, right, top, bottom에 offset(공백?)을 줘서 위치를 조정할 수 있음
+                           (기준은 부모 태그 - 즉, static일 때 원래 위치하는 곳을 기준으로)
+                         - left : 100px 이라고 하면 오른쪽으로 100px 이동하는 결과를 가져옴.
+                         - right보다는 left가, bottom보단 top이 우선순위를 가짐.
+
+                     - absolute
+                         - relative와는 달리 html을 기준으로 위치를 조정함.
+                           (만약 ancestor 중에 position이 static이 아닌 게 있으면 거기가 기준이 됨)
+                         - left와 top의 기본값은 부모 element를 기준으로 설정됨.
+                         - position을 absolute로 지정하면 부모와의 연결이 끊기기 때문에 크기가 바뀜
+
+                     - fixed
+                         - absolute처럼 위치를 지정하는데, 스크롤을 내려도 위치가 고정됨! (광고창같이)
+
+                 <img src="images/별표3.png" class="star">
+                 <li><div class="impt">Flex : 레이아웃 다루는 모델</div></li>
+                     - container 안에 item들이 있는 형태
+
+                     - container 속성
+                        - display: flex;
+                        - flex-direction: <strong>row</strong> row-reverse colmn column-reverse
+                        - flex-wrap: <strong>nowrap</strong> wrap wrap-reverse
+                        - align-items: 수직 방향의 정렬
+                          (<strong>stretch</strong> flex-start center ...)
+                        - justify-content: 수평 방향의 정렬
+                          (<strong>flex-start</strong> space-between center ...)
+
+                     - item 속성
+                        - flex-basis: item의 크기 (row이면 width, column이면 height)
+                        - flex-grow: 0이 기본값인데 1을 주는 순간, 여백 없이 items들이 container를 꽉 채움
+                        - flex-shrink: (아마) 1이 기본값인데 0을 주는 순간, 그 item은 화면이 줄어도 작아지지 않음
+                        - align-self
+                        - order
+
+                     - 속성들에 대해 쉽게 살펴보기
+                       <a href="https://opentutorials.org/module/2367/13526" target="_blank"
+                       >https://opentutorials.org/module/2367/13526</a>
+
+                     - holy grail layout (<a href="https://opentutorials.org/module/2398/13570"
+                       target="_blank">https://opentutorials.org/module/2398/13570)</a>
+                        - 이런 형태의 레이아웃
+                          <img src="images/holy%20grail%20layout.png" height=200px> <img src="images/holy%20grail%20layout2.png" height=200px>
+
+                 <li>Multi column : <a href="https://www.youtube.com/watch?v=
+                 OnDuPsg631g&list=PLuHgQVnccGMDaVaBmkX0qfB45R_bYrV62&index=39"
+                 target="_blank">크게 쓸 일 없을 것 같아서 링크만 걸어둠</a></li>
+
+                 <img src="images/별표.png" class="star">
+                 <li><div class="impt">Media query : 반응형 디자인</div></li>
+                     - <div class="code">@media(max-width:500px)</div>{
+                           width가 500px 이하일 때 일어나는 일
+                       }
+                     - <a href="https://www.youtube.com/watch?v=y3Zx-nVH25s&list=PLuHgQVnccGMDaVa
+                     BmkX0qfB45R_bYrV62&index=40" target="_blank">스마트폰 화면에서 어떻게 보여지는지</a> (09:00 ~)
+
+                 <li>Background</li>
+                     - background-color : 배경색깔
+                     - background-image : url('위치');
+                     - background-repeat : 배경 이미지의 반복 여부
+                       (<strong>repeat</strong> no-repeat repeat-x repeat-y)
+                     - background-attachment : 배경 이미지가 움직이는지 여부
+                       (<strong>scroll</strong> fixed)
+                     - background-size : 배경 이미지의 크기
+                       (500px 100px / cover / contain)
+                     - background-position : 배경 이미지의 위치
+                       (left top / right bottom / center center)
+
+                 <li>Filter : 이미지나 텍스트에 효과를 주는 기능</li>
+                     - filter: grayscale, blur 등
+                     - transition 기능
+                     - 참고 사이트 : CSS Filters Playground
+
+                 <li>white-space : 줄바꿈, 띄어쓰기 관련</li>
+
+
+                 <li>border-radius : 테두리 둥글게</li>
+
+                 <li> 가상 클래스 선택자</li>
+                     - active : 마우스로 클릭한 상태
+                     - hover : 마우스를 올려놓은 상태
+                     - visited : 방문한 링크 (속성 제한됨)
+                     - link : 방문하지 않은 링크
+                     - focus : 선택되어진 상태
+                       (tab으로 이동하는 그거)
+            </ol>
+        </pre>
+    </main>
+</body>
+</html>
